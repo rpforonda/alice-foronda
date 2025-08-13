@@ -31,7 +31,7 @@ jobs:
           mv tailwindcss-linux-x64 tailwindcss
 
       - name: Build Tailwind to dist/
-        run: ./tailwindcss -i ./tailwind.css -o ./dist/tailwind.css
+        run: ./tailwindcss -i ./public/tailwind.css -o ./dist/tailwind.css
 
       - name: Build with trunk (release)
         run: trunk build --release
