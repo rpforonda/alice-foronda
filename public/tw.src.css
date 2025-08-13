@@ -1,0 +1,6 @@
+/* tailwind.css */
+@import "tailwindcss";
+
+/* Tell Tailwind where your class names live */
+@source "./index.html";
+@source "./src";
