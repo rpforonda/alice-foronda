@@ -30,11 +30,11 @@ jobs:
           chmod +x tailwindcss-linux-x64
           mv tailwindcss-linux-x64 tailwindcss
 
-      - name: Build Tailwind to dist/
-        run: ./tailwindcss -i ./public/tailwind.css -o ./dist/tailwind.css
-
       - name: Build with trunk (release)
         run: trunk build --release
+
+      - name: Build Tailwind to dist/
+        run: ./tailwindcss -i ./public/tailwind.css -o ./dist/tailwind.css
 
       - name: SPA fallback (only needed if you use pretty routes)
         run: cp dist/index.html dist/404.html || true
